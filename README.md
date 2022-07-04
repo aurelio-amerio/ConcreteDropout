@@ -2,6 +2,11 @@
 [![Downloads](https://pepy.tech/badge/concretedropout)](https://pepy.tech/project/concretedropout)
 
 Concrete Dropout updated implementation for Tensorflow 2.0 following the [original code](https://github.com/yaringal/ConcreteDropout) from the paper.
+# Installation
+To install this package, please use:
+```bash
+pip install concretedropout
+```
 
 # Introduction
 Concrete dropout allows for the dropout probability of a layer to become a trainable parameter. For more information, see the original paper: [https://arxiv.org/abs/1705.07832](https://arxiv.org/abs/1705.07832)
@@ -69,7 +74,3 @@ For a practical example on how to use concrete dropout for the mnist dataset, se
 
 # Bayesian neural network with MCDropout
 You can find [here](https://github.com/aurelio-amerio/ConcreteDropout-TF2/blob/main/examples/regression_MCDropout.ipynb) an example on how to use MCDropout and Concrete Dropout to implement a Bayesian Neural Network with MCDropout. For more information, see [arXiv:1506.02142](https://arxiv.org/abs/1506.02142).
-
-
-
-
