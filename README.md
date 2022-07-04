@@ -1,5 +1,6 @@
 # ConcreteDropout-TF2
 [![Downloads](https://pepy.tech/badge/concretedropout)](https://pepy.tech/project/concretedropout)
+[![](https://img.shields.io/pypi/v/concretedropout.svg?maxAge=3600)](https://pypi.org/project/concretedropout/)
 
 Concrete Dropout updated implementation for Tensorflow 2.0 following the [original code](https://github.com/yaringal/ConcreteDropout) from the paper.
 # Installation
