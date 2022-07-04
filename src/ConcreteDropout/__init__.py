@@ -37,7 +37,7 @@ class ConcreteDropout(Wrapper):
     """
 
     def __init__(self, layer, weight_regularizer=1e-6, dropout_regularizer=1e-5,
-                 init_min=0.1, init_max=0.1, is_mc_dropout=True, data_format=None, temperature=0.1, **kwargs):
+                 init_min=0.1, init_max=0.1, is_mc_dropout=False, data_format=None, temperature=0.1, **kwargs):
         assert 'kernel_regularizer' not in kwargs, "Must not provide a kernel regularizer."
         super(ConcreteDropout, self).__init__(layer, **kwargs)
         self.temperature = temperature
