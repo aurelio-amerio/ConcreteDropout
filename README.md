@@ -52,13 +52,21 @@ The suggested way to employ concrete dropout layers is the following:
 import tensorflow as tf
 from concretedropout import ConcreteDenseDropout 
 
+#... import the dataset
+Ns = x_train.shape[0]
+# get the regularizers
+wr = get_weight_regularizer(Ns, l=1e-2, tau=1.0) # tau is the inverse 
+dr = get_dropout_regularizer(Ns, tau=1.0, cross_entropy_loss=True)
+
 # ... a neural network with output x
-dense1 = tf.keras.layers.Dense(N_neurons)
+dense1 = tf.keras.layers.Dense(N_neurons, weight_regularizer=wr, dropout_regularizer=dr)
 x = ConcreteDenseDropout(dense1)(x)
 ```
 
-For a practical example on how to use concrete dropout for the mnist dataset, see this [example]()
+For a practical example on how to use concrete dropout for the mnist dataset, see this [example](https://github.com/aurelio-amerio/ConcreteDropout-TF2/blob/main/examples/mnist_convnet_concrete_dropout.ipynb).
 
+# Bayesian neural network with MCDropout
+You can find [here](https://github.com/aurelio-amerio/ConcreteDropout-TF2/blob/main/examples/regression_MCDropout.ipynb) an example on how to use MCDropout and Concrete Dropout to implement a Bayesian Neural Network with MCDropout. For more information, see [arXiv:1506.02142](https://arxiv.org/abs/1506.02142).
 
 
 
