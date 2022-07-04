@@ -1,4 +1,6 @@
 # ConcreteDropout-TF2
+[![Downloads](https://pepy.tech/badge/concretedropout)](https://pepy.tech/project/concretedropout)
+
 Concrete Dropout updated implementation for Tensorflow 2.0 following the [original code](https://github.com/yaringal/ConcreteDropout) from the paper.
 
 # Introduction
