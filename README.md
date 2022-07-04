@@ -28,24 +28,12 @@ Each concrete dropout layer supports the following arguments:
 - `layer`: 
     an instance of the layer to which concrete dropout will be applied
 - `weight_regularizer=1e-6`:
-    A positive number which satisfies
-    $$
-    \text{weight\_regularizer} = l^2 / (\tau * N)
-    $$
-    with prior lengthscale l, model precision $\tau$ (inverse observation noise),
-    and N the number of instances in the dataset.
+    A positive number which satisfies weight_regularizer = $l^2 / (\tau * N)$ with prior lengthscale l, model precision τ (inverse observation noise), and N the number of instances in the dataset.
     Note that kernel_regularizer is not needed.
     The appropriate weight_regularizer value can be computed with the utility function `get_weight_regularizer(N, l, tau)`
 - `dropout_regularizer=1e-5`:
-    A positive number which satisfies
-    $$
-        \text{dropout\_regularizer} = 2 / (\tau * N)
-    $$
-    with model precision $\tau$ (inverse observation noise) and N the number of
-    instances in the dataset.
-    Note the relation between dropout_regularizer and weight_regularizer:
-        $weight_regularizer / dropout_regularizer = l**2 / 2$
-    with prior lengthscale l. Note also that the factor of two should be
+    A positive number which satisfies dropout_regularizer = $2 / (\tau * N)$ with model precision τ (inverse observation noise) and N the number of instances in the dataset.
+    Note the relation between dropout_regularizer and weight_regularizer: weight_regularizer / dropout_regularizer = $l^2 / 2$ with prior lengthscale l. Note also that the factor of two should be
     ignored for cross-entropy loss, and used only for the eculedian loss.
     The appropriate dropout_regularizer value can be computed with the utility function `get_dropout_regularizer(N, tau, cross_entropy_loss=False)`. By default, a regression problem will be assumed. 
 - `init_min=0.1`: minimum value for the random initial dropout probability
