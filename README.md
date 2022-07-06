@@ -65,4 +65,4 @@ For a practical example on how to use concrete dropout for the mnist dataset, se
 You can find [here](https://github.com/aurelio-amerio/ConcreteDropout-TF2/blob/main/examples/regression_MCDropout.ipynb) an example on how to use MCDropout and Concrete Dropout to implement a Bayesian Neural Network with MCDropout. For more information, see [arXiv:1506.02142](https://arxiv.org/abs/1506.02142).
 
 # Known issues
-By the way the additional dropout loss term is added to the main loss term, during training and evaluation the **model loss** might become a **negative number**. This has no impact on the actual optimisation of the model. If you desire to track your loss function separately, as a work around it is advised to add it to the list of metrics. 
+Due to the way the additional dropout loss term is added to the main loss term, during training and evaluation the **model loss** might become a **negative number**. This has no impact on the actual optimisation of the model. If you desire to track your loss function separately, as a work around it is advised to add it to the list of metrics. 
