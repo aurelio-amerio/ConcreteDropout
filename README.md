@@ -19,7 +19,6 @@ This package implements Concrete Dropout for the following layers:
 - Conv3D - `ConcreteSpatialDropout2D`
 - DepthwiseConv1D - `ConcreteSpatialDropoutDepthwise1D`
 - DepthwiseConv2D - `ConcreteSpatialDropoutDepthwise2D`
-- DepthwiseConv3D - `ConcreteSpatialDropoutDepthwise3D`
 
 Please notice that the dropout layer will be applied **before** the chosen layer.
 
