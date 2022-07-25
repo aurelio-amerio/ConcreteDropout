@@ -2,7 +2,7 @@
 [![Downloads](https://pepy.tech/badge/concretedropout)](https://pepy.tech/project/concretedropout)
 [![](https://img.shields.io/pypi/v/concretedropout.svg?maxAge=3600)](https://pypi.org/project/concretedropout/)
 
-Concrete Dropout updated implementation for Tensorflow 2.0 following the [original code](https://github.com/yaringal/ConcreteDropout) from the paper.
+Concrete Dropout updated implementation for Tensorflow 2.0 and PyTorch, following the [original code](https://github.com/yaringal/ConcreteDropout) from the paper.
 # Installation
 To install this package, please use:
 ```bash
@@ -15,7 +15,7 @@ Concrete dropout allows for the dropout probability of a layer to become a train
 This package implements Concrete Dropout for the following layers:
 Tensorflow:
 - Dense - `tensorflow.Ctensorflow.oncreteDenseDropout`
-- Conv1D - `ConcreteSpatialDropout1D`
+- Conv1D - `tensorflow.ConcreteSpatialDropout1D`
 - Conv2D - `tensorflow.ConcreteSpatialDropout2D`
 - Conv3D - `tensorflow.ConcreteSpatialDropout3D`
 - DepthwiseConv1D - `tensorflow.ConcreteSpatialDropoutDepthwise1D`
@@ -45,7 +45,7 @@ Each concrete dropout layer supports the following arguments:
 - `init_min=0.1`: minimum value for the random initial dropout probability
 - `init_max=0.1`: maximum value for the random initial dropout probability
 - `is_mc_dropout=False`: enables Monte Carlo Dropout (i.e. dropout will remain active also at prediction time). Default: False. 
-- `data_format=None`: channels_last or channels_first. Defaults to channels_last. Optional, only for Tensorflow. PyTorch defaults to channel_first.
+- `data_format=None`: channels_last or channels_first (only for Tensorflow). Defaults to channels_last for Tensorflow. PyTorch defaults to channel_first.
 - `temperature`: temperature of the concrete distribution. For more information see [arXiv:1611.00712](https://arxiv.org/abs/1611.00712). Defaults to `0.1` for dense layers, and `2/3` for convolution layers.
 
 # Example
