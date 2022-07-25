@@ -14,7 +14,7 @@ Concrete dropout allows for the dropout probability of a layer to become a train
 
 This package implements Concrete Dropout for the following layers:
 Tensorflow:
-- Dense - `tensorflow.Ctensorflow.oncreteDenseDropout`
+- Dense - `tensorflow.ConcreteDenseDropout`
 - Conv1D - `tensorflow.ConcreteSpatialDropout1D`
 - Conv2D - `tensorflow.ConcreteSpatialDropout2D`
 - Conv3D - `tensorflow.ConcreteSpatialDropout3D`
