@@ -31,7 +31,7 @@ class ConcreteDropout(nn.Module):
         raise NotImplementedError(
             "Subclasses of ConcreteDropout must implement the noise shape")
 
-    def spatial_concrete_dropout(self, x):
+    def _concrete_dropout(self, x):
         '''
         Concrete dropout - used at training time (gradients can be propagated)
         :param x: input
@@ -81,10 +81,10 @@ class ConcreteDropout(nn.Module):
         self.p = torch.sigmoid(self.p_logit)
         self.regularization = self.get_regularization(x, layer)
         if self.is_mc_dropout:
-            return layer(self.spatial_concrete_dropout(x))
+            return layer(self._concrete_dropout(x))
         else:
             if self.training:
-                return layer(self.spatial_concrete_dropout(x))
+                return layer(self._concrete_dropout(x))
             else:
                 return layer(x)
 
