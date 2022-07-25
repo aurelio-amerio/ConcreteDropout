@@ -1,4 +1,4 @@
-# ConcreteDropout-TF2
+# ConcreteDropout
 [![Downloads](https://pepy.tech/badge/concretedropout)](https://pepy.tech/project/concretedropout)
 [![](https://img.shields.io/pypi/v/concretedropout.svg?maxAge=3600)](https://pypi.org/project/concretedropout/)
 
