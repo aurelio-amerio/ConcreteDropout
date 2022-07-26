@@ -68,7 +68,7 @@ x = ConcreteDenseDropout(dense1, weight_regularizer=wr, dropout_regularizer=dr)(
 PyTorch:
 ```python
 import torch 
-from concretedropout.pytorch import ConcreteLinearDropout 
+from concretedropout.pytorch import ConcreteDropout, ConcreteLinearDropout 
 
 #... import the dataset
 Ns = x_train.shape[0]
