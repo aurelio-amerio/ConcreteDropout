@@ -53,7 +53,7 @@ The suggested way to employ concrete dropout layers is the following.
 Tensorflow:
 ```python
 import tensorflow as tf
-from concretedropout.tensorflow import ConcreteDenseDropout 
+from concretedropout.tensorflow import ConcreteDenseDropout, get_weight_regularizer, get_dropout_regularizer 
 
 #... import the dataset
 Ns = x_train.shape[0]
@@ -68,7 +68,7 @@ x = ConcreteDenseDropout(dense1, weight_regularizer=wr, dropout_regularizer=dr)(
 PyTorch:
 ```python
 import torch 
-from concretedropout.pytorch import ConcreteDropout, ConcreteLinearDropout 
+from concretedropout.pytorch import ConcreteDropout, ConcreteLinearDropout, get_weight_regularizer, get_dropout_regularizer
 
 #... import the dataset
 Ns = x_train.shape[0]
