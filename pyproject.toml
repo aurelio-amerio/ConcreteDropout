@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ConcreteDropout"
-version = "0.2.1"
+version = "0.3.0"
 authors = [
   { name="Aurelio Amerio", email="aurelio.amerio@ific.uv.es" },
 ]
@@ -12,7 +12,7 @@ description = "Concrete Dropout implementation for Tensorflow 2 and PyTorch"
 dependencies = []
 readme = "README.md"
 license = { file="LICENSE" }
-requires-python = ">=3.7"
+requires-python = ">=3.9"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
@@ -20,5 +20,10 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/aurelio-amerio/ConcreteDropout-TF2"
-"Bug Tracker" = "https://github.com/aurelio-amerio/ConcreteDropout-TF2/issues"
+"Homepage" = "https://github.com/aurelio-amerio/ConcreteDropout"
+"Bug Tracker" = "https://github.com/aurelio-amerio/ConcreteDropout/issues"
+
+[project.optional-dependencies]
+tensorflow = ["tensorflow>=2.0"]
+jax = ["jax[cuda]", "jaxlib", "flax", "optax"] # or just "jax" if no cuda
+pytorch = ["torch"]
